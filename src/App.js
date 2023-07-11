@@ -40,9 +40,11 @@ function App() {
 }
 
 function Card(props){
+    let i = props.i+1;
     return(
         <div className="col-md-4">
-            <img src={`https://codingapple1.github.io/shop/shoes${props.i + 1}.jpg`} width="80%" />
+            <img src={'https://codingapple1.github.io/shop/shoes' + i + '.jpg'} width="80%" />
+            {/*<img src={`https://codingapple1.github.io/shop/shoes${props.i}.jpg`} width="80%" />*/}
             <h4>{props.shoes[props.i].title}</h4>
             <p>{props.shoes[props.i].content}</p>
             <p>{props.shoes[props.i].price}</p>
